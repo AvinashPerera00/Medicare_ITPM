@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Patient inquiry</title>
+    <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2021.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-vivid.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-indigo.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=BioRhyme:wght@700&display=swap">
+
+    <style type="text/css">
+        .center {
+            text-align: center;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: red;
+        }
+
+        h1 {
+            position: relative;
+            padding: 0;
+            margin: 0;
+            font-family: "Raleway", sans-serif;
+            font-weight: 300;
+            font-size: 40px;
+            color: #080808;
+            -webkit-transition: all 0.4s ease 0s;
+            -o-transition: all 0.4s ease 0s;
+            transition: all 0.4s ease 0s;
+        }
+
+        h1 span {
+            display: block;
+            font-size: 0.5em;
+            line-height: 1.3;
+        }
+
+        h1 em {
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        .two h1 {
+            text-transform: capitalize;
+            font-family: DejaVu Sans Mono, monospace;
+        }
+
+        .two h1:before {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 2px;
+            content: "";
+            background-color: #c50000;
+        }
+
+        .two h1 span {
+            font-size: 13px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            line-height: 3em;
+            padding-left: 0.25em;
+            color: rgba(0, 0, 0, 0.4);
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class=" w3-light-blue">
+
+        <div class=" w3-mobile">
+            <div class="w3-container w3-mobile">
+                <div class="two">
+                    <h1>
+                        Medicare Pharmacy <span>Service from the heart</span>
+                    </h1>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </header>
+    <br>
+    <div class="w3-container">
+
+
+        <div style=" margin: auto;
+ 				 width: 50%;
+  				border: 0px ;
+  				padding: 10px;">
+            <!-- 	Video implimentation -->
+            <video style="width: 100%; height:auto;" class="w3-border w3-round" controls>
+                <source src="../video/design.mp4" type="video/mp4">
+            </video>
+        </div>
+
+
+
+        <br>
+        <div>
+            <p Style="font-size:25px; ">Inquiry form </p>
+        </div>
+        <form method="post" action="insertinq.jsp" class="w3-container w3-theme-l5 w3-border w3-round">
+
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:50px"><i class="w3-xlarge fa fa-user w3-text-blue "></i></div>
+                <div class="w3-rest">
+                    <input class="w3-input w3-border" name="fullname" type="text" placeholder="Full Name" required>
+                </div>
+            </div>
+
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:50px"><i class="w3-xlarge fa fa-user w3-text-blue "></i></div>
+                <div class="w3-rest">
+                    <input class="w3-input w3-border" name="nic" type="text" placeholder="Natinoal identiy card number"
+                        required>
+                </div>
+            </div>
+
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:50px"><i class="w3-xlarge fa fa-envelope-o w3-text-blue "></i></div>
+                <div class="w3-rest">
+                    <input class="w3-input w3-border" name="email" type="email" placeholder="Email" required>
+                </div>
+            </div>
+
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:50px"><i class="w3-xlarge fa fa-phone w3-text-blue"></i></div>
+                <div class="w3-rest">
+                    <input class="w3-input w3-border" name="phone" type="text" placeholder="Phone" required>
+                </div>
+            </div>
+
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:50px"><i class="w3-xlarge fa fa-pencil w3-text-blue"></i></div>
+                <div class="w3-rest">
+                    <textarea class="w3-input w3-border" name="tarea" placeholder="Enter message" required></textarea>
+                </div>
+            </div>
+
+
+            <div class="w3-row w3-section">
+                <div class="w3-col" style="width:50px"><i class="w3-xlarge fa fa-arrow-right w3-text-blue"></i></div>
+                <div class="w3-rest">
+                    <input type="submit" value="send" class=" w3-btn w3-round-large  w3-flat-belize-hole " required>
+                </div>
+            </div>
+        </form>
+        <br><br>
+
+
+        <div class="w3-row ">
+
+            <div class="w3-container w3-half">
+                <span style="font-size:100px" class="w3-text-blue">&#10077;</span><br>
+                <p style="margin-top:-60px">
+                    <i><b>We care beyond what your doctors have prescribed , Feel free to tell us anything.
+                        </b></i>
+                </p>
+            </div>
+        </div><br>
+        <a href="../welcome.html">Go back</a>
+
+        <br>
+
+    </div>
+</body>
+
+</html>

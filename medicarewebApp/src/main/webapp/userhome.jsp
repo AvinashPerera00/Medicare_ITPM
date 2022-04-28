@@ -32,8 +32,7 @@
 
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav">
-                            <a href="login.jsp" class="nav-item nav-link active">Update
-                                profile</a>
+                            <a href="welcome.html" class="nav-item nav-link active">Home</a>
 
 
                         </div>
@@ -103,9 +102,7 @@
                                     <hr class="my-4">
                                     <p class="fw-bold fw-italic text-danger">Warning !
                                         please insert the medicine that is written in the prescription.</p>
-                                    <br>
-                                    <a href="index.jsp" class="text-danger text-sm">
-                                        Logout </a>
+                                   
                                 </div>
 
 

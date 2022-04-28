@@ -48,7 +48,7 @@
 	
 	<servlet>
 		<servlet-name>index</servlet-name>
-		<servlet-class>com.customer.LoginConfirmation</servlet-class>
+		<servlet-class>com.customer.LoginMain</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>index</servlet-name>

@@ -18,7 +18,7 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav">
-                    <a href="login.jsp" class="nav-item nav-link active">Update profile</a>
+                    <a href="welcome.html" class="nav-item nav-link active">Home</a>
                     
                     
                 </div>

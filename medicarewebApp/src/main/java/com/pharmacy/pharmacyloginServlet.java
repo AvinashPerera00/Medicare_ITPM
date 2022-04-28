@@ -34,7 +34,7 @@ public class pharmacyloginServlet extends HttpServlet {
 				ps.setString(2, p);
 				ResultSet rs=ps.executeQuery();
 				if(rs.next()) {
-					RequestDispatcher rd= request.getRequestDispatcher("userhome.jsp");
+					RequestDispatcher rd= request.getRequestDispatcher("phome.html");
 					rd.forward(request, response);
 				}else {
 					out.println("<font color=red size=18>Login failed!!!<br>");
