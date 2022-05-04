@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Suppliers</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+
+<style>
+.dropdown {
+  color: blue;
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 7px 85px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: lightblue;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 85px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+</style>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top"  >
+  <div class="w3-row w3-padding w3-white"  >
+    <div class="w3-col s3" >
+      <a href="http://localhost:8090/medicine_stock_management/stockhome.html" class="w3-button w3-block w3-blue" >MEDI CARE</a>
+    </div>
+    <div class="w3-col s3" >
+      <a href="http://localhost:8090/medicine_stock_management/retrieve.jsp" class="w3-button w3-block w3-blue" >Available Products</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="http://localhost:8090/medicine_stock_management/addproducts.html" class="w3-button w3-block w3-blue" >Add Products</a>
+    </div> 
+    <div class="w3-col s3">
+      <a href="http://localhost:8090/medicine_stock_management/suppliers.html" class="w3-button w3-block w3-blue" >Suppliers</a>
+    </div>
+  </div>
+</div>
+<br><br>
+
+
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+ ;
+}
+
+div[id=form] {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 250px;
+  
+  
+}
+</style>
+
+<div id="form" class="w3-container w3-padding-32"   >
+    <h3 align="center">Add Suppliers</h3>
+    
+    <form method="post" action="processaddsup.jsp"   name="myForm"  >
+      Supplier no:<br>
+      <input class=" w3-border" type="text" name="sno"  placeholder="Supplier no" required>
+      <br>
+      Supplier Name:<br>
+      <input class="w3-input w3-border" type="text" name="sname"  placeholder="Supplier name" required>
+      <br>
+      Company:<br>
+      <input type="text" name="company" class="w3-input w3-border" placeholder="company" >
+      <br>
+      Contact no:<br>
+      <input type="text" name="contact"  class="w3-input w3-border" placeholder="contact no" >
+      <br>
+      Email:<br>
+      <input type="text" name="email" class="w3-input w3-border" pattern=".+@globex\.com"  placeholder="email" required>
+      <br>
+      Address:<br>
+      <input type="text" name="address" class="w3-input w3-border"  placeholder="address" required>
+      <br><br>
+      <input type="submit" class="w3-button w3-blue w3-section" value="submit">
+      
+    </form>
+  </div>
+<footer class="w3-padding-32 w3-blue w3-center w3-margin-top">
+  <p>© MEDI CARE</p>
+</footer>
+
+
+
+
+ </body>
+</html>
