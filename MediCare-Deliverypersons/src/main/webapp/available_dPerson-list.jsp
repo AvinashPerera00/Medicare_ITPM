@@ -23,6 +23,10 @@
 				<li><a href="<%=request.getContextPath()%>/list"
 					class="nav-link">Delivery Persons</a></li>
 			</ul>
+			<ul class="navbar-nav">
+				<li><a href="<%=request.getContextPath()%>/dlist"
+					class="nav-link">Deliveries</a></li>
+			</ul>
 		</nav>
 	</header>
 	<br>
@@ -42,6 +46,7 @@
 				<a>   </a>
 				<a href="href="<%=request.getContextPath()%>/list"
 					class="btn btn-success">All Delivery Persons</a>
+			<br>
 			<br>
 			<table class="table table-bordered">
 				<thead>
