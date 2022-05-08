@@ -12,7 +12,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.xadmin.deliverypmanagement.bean.Delivery;
 import com.xadmin.deliverypmanagement.bean.DeliveryPerson;
+import com.xadmin.deliverypmanagement.dao.deliveryDao;
 import com.xadmin.deliverypmanagement.dao.deliveryPersonDao;
 
 
@@ -23,12 +25,14 @@ import com.xadmin.deliverypmanagement.dao.deliveryPersonDao;
 public class DeliveryPservlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        private deliveryPersonDao DeliveryPersonDao;
+       private deliveryDao DeliveryDao;
 
 	/**
 	 * @see Servlet#init(ServletConfig)
 	 */
 	public void init() throws ServletException {
 		DeliveryPersonDao =new deliveryPersonDao();
+		DeliveryDao =new deliveryDao();
 	}
 	
 	/**
@@ -64,6 +68,24 @@ public class DeliveryPservlet extends HttpServlet {
 					break;
 				case "/update":
 					update_dPerson(request, response);
+					break;
+				case "/dnew":
+					showNewDForm(request, response);
+					break;
+				case "/dinsert":
+					insert_delivery(request, response);
+					break;
+				case "/ddelete":
+					delete_delivery(request, response);
+					break;
+				case "/dedit":
+					showEditDForm(request, response);
+					break;
+				case "/dupdate":
+					update_delivery(request, response);
+					break;
+				case "/dlist":
+					list_delivery(request, response);
 					break;
 			
 				default:
@@ -107,7 +129,6 @@ public class DeliveryPservlet extends HttpServlet {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("dPerson-form.jsp");
 		request.setAttribute("dPerson", existingdPerson);
 		dispatcher.forward(request, response);
-
 	}
 
 	private void insert_dPerson(HttpServletRequest request, HttpServletResponse response) 
@@ -143,6 +164,66 @@ public class DeliveryPservlet extends HttpServlet {
 		int id = Integer.parseInt(request.getParameter("id"));
 		DeliveryPersonDao.delete_dPerson(id);
 		response.sendRedirect("list");
+
+	}
+	
+	private void list_delivery(HttpServletRequest request, HttpServletResponse response)
+			throws SQLException, IOException, ServletException {
+		List<Delivery> list_delivery = DeliveryDao.selectAlldeliveries();
+		request.setAttribute("list_delivery", list_delivery);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("delivery-list.jsp");
+		dispatcher.forward(request, response);
+	}
+
+	private void showNewDForm(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		RequestDispatcher dispatcher =request.getRequestDispatcher("delivery-form.jsp");
+		dispatcher.forward(request, response);
+	}
+
+	private void showEditDForm(HttpServletRequest request, HttpServletResponse response)
+			throws SQLException, ServletException, IOException {
+		int id = Integer.parseInt(request.getParameter("id"));
+		Delivery existingDelivery = DeliveryDao.selectDelivery(id);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("delivery-form.jsp");
+		request.setAttribute("delivery", existingDelivery);
+		dispatcher.forward(request, response);
+
+	}
+
+	private void insert_delivery(HttpServletRequest request, HttpServletResponse response) 
+			throws SQLException, IOException {
+		int oid = Integer.parseInt(request.getParameter("oid"));
+		String dlperson = request.getParameter("dlperson");
+		int dlpersonid = Integer.parseInt(request.getParameter("dlpersonid"));
+		String odetails = request.getParameter("odetails");
+		String destination = request.getParameter("destination");
+		String dldate = request.getParameter("dldate");
+		Delivery newdelivery = new Delivery(oid, dlperson, dlpersonid, odetails, destination, dldate);
+		DeliveryDao.insertDelivery(newdelivery);
+		response.sendRedirect("dlist");
+	}
+
+	private void update_delivery(HttpServletRequest request, HttpServletResponse response) 
+			throws SQLException, IOException {
+		int dlid = Integer.parseInt(request.getParameter("dlid"));
+		int oid = Integer.parseInt(request.getParameter("oid"));
+		String dlperson = request.getParameter("dlperson");
+		int dlpersonid = Integer.parseInt(request.getParameter("dlpersonid"));
+		String odetails = request.getParameter("odetails");
+		String destination = request.getParameter("destination");
+		String dldate = request.getParameter("dldate");
+
+		Delivery delivery = new Delivery(dlid, oid, dlperson, dlpersonid, odetails, destination, dldate);
+		DeliveryDao.update_delivery(delivery);
+		response.sendRedirect("dlist");
+	}
+
+	private void delete_delivery(HttpServletRequest request, HttpServletResponse response) 
+			throws SQLException, IOException {
+		int id = Integer.parseInt(request.getParameter("id"));
+		DeliveryDao.delete_delivery(id);
+		response.sendRedirect("dlist");
 
 	}
 

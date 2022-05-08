@@ -23,6 +23,10 @@
 				<li><a href="<%=request.getContextPath()%>/list"
 					class="nav-link">Delivery Persons</a></li>
 			</ul>
+			<ul class="navbar-nav">
+				<li><a href="<%=request.getContextPath()%>/dlist"
+					class="nav-link">Deliveries</a></li>
+			</ul>
 		</nav>
 	</header>
 	<br>
@@ -43,12 +47,13 @@
 				<a href="href="<%=request.getContextPath()%>/list"
 					class="btn btn-success">All Delivery Persons</a>
 			<br>
+			<br>
 			<table class="table table-bordered">
 				<thead>
 					<tr>
 						<th>ID</th>						
-						<th>Email</th>
 						<th>Name</th>
+						<th>Email</th>
 						<th>Contact No.</th>						
 						<th>Availability</th>
 						<th>Actions</th>

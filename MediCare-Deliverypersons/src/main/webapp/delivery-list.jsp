@@ -35,47 +35,43 @@
 		<!-- <div class="alert alert-success" *ngIf='message'>{{message}}</div> -->
 
 		<div class="container">
-			<h3 class="text-center">List of All Delivery Persons</h3>
+			<h3 class="text-center">List of All Deliveries</h3>
 			<hr>
 			<div class="container text-left">
 
-				<a href="<%=request.getContextPath()%>/new" class="btn btn-success">Add
-					New Delivery Person</a>
+				<a href="<%=request.getContextPath()%>/dnew" class="btn btn-success">Add
+					New Delivery</a>
 				<a>   </a>
-				<a href="<%=request.getContextPath()%>/showavailable" class="btn btn-success">Available Delivery Persons</a>
-				<a>   </a>
-				<a href="<%=request.getContextPath()%>/list" class="btn btn-success">All Delivery Persons</a>
+				<a href="<%=request.getContextPath()%>/dlist" class="btn btn-success">All Deliveries</a>
 			<br>
 			<br>
-			
 			<table class="table table-bordered">
 				<thead>
 					<tr>
-						<th>ID</th>
-						<th>NIC</th>
-						<th>Name</th>
-						<th>Email</th>
-						<th>Address</th>
-						<th>Contact No.</th>
-						<th>Availability</th>
+						<th>Delivery ID</th>
+						<th>Order ID</th>
+						<th>Delivery person Name</th>
+						<th>Delivery person ID</th>
+						<th>Order Details</th>
+						<th>Destination</th>
+						<th>Delivery Date</th>
 						<th>Actions</th>
 					</tr>
 				</thead>
 				<tbody>
 				
-					<c:forEach var="dPerson" items="${list_dPerson}">
+					<c:forEach var="delivery" items="${list_delivery}">
 
 						<tr>
-							<td><c:out value="${dPerson.id}" /></td>
-							<td><c:out value="${dPerson.nic}" /></td>
-							<td><c:out value="${dPerson.name}" /></td>
-							<td><c:out value="${dPerson.email}" /></td>
-							<td><c:out value="${dPerson.address}" /></td>
-							<td><c:out value="${dPerson.contact}" /></td>
-							<td><c:out value="${dPerson.availability}" /></td>
-							<td><a href="edit?id=<c:out value='${dPerson.id}' />">Edit</a>
-								&nbsp;&nbsp;&nbsp;&nbsp; <a
-								href="delete?id=<c:out value='${dPerson.id}' />">Delete</a></td>
+							<td><c:out value="${delivery.dlid}" /></td>
+							<td><c:out value="${delivery.oid}" /></td>
+							<td><c:out value="${delivery.dlperson}" /></td>
+							<td><c:out value="${delivery.dlpersonid}" /></td>
+							<td><c:out value="${delivery.odetails}" /></td>
+							<td><c:out value="${delivery.destination}" /></td>
+							<td><c:out value="${delivery.dldate}" /></td>
+							<td><a href="dedit?id=<c:out value='${delivery.dlid}' />">Edit</a>
+							<a href="ddelete?id=<c:out value='${delivery.dlid}' />">Delete</a></td>
 						</tr>
 					</c:forEach>
 		

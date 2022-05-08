@@ -12,7 +12,7 @@ public class DeliveryPerson {
 	
 	
 	
-	public DeliveryPerson(String nic, String email, String name, String address, String contact, String availability) {
+	public DeliveryPerson(String nic, String name, String email, String address, String contact, String availability) {
 		super();
 		this.nic = nic;
 		this.name = name;
@@ -22,7 +22,7 @@ public class DeliveryPerson {
 		this.availability = availability;
 	}
 
-	public DeliveryPerson(int id, String nic, String email, String name, String address, String contact, String availability) {
+	public DeliveryPerson(int id, String nic, String name, String email, String address, String contact, String availability) {
 		super();
 		this.id = id;
 		this.nic = nic;

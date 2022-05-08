@@ -23,6 +23,10 @@
 				<li><a href="<%=request.getContextPath()%>/list"
 					class="nav-link">Delivery Persons</a></li>
 			</ul>
+			<ul class="navbar-nav">
+				<li><a href="<%=request.getContextPath()%>/dlist"
+					class="nav-link">Deliveries</a></li>
+			</ul>
 		</nav>
 	</header>
 	<br>
@@ -59,13 +63,13 @@
 
 				<fieldset class="form-group">
 					<label>Name</label> <input type="text"
-						value="<c:out value='${dPerson.email}' />" class="form-control"
+						value="<c:out value='${dPerson.name}' />" class="form-control"
 						name="name" required="required" placeholder="Ex :- Robert Frank">
 				</fieldset>
 
 				<fieldset class="form-group">
 					<label>Email Address</label> <input type="email"
-						value="<c:out value='${dPerson.name}' />" class="form-control"
+						value="<c:out value='${dPerson.email}' />" class="form-control"
 						name="email" required="required" placeholder="Ex :- robert@gmail.com" >
 				</fieldset>
 
