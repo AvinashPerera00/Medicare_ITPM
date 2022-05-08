@@ -38,7 +38,7 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav">
-                    <a href="login.jsp" class="nav-item nav-link active">Update profile</a>
+                    <a href="welcome.html" class="nav-item nav-link active">Home</a>
                     
                     
                 </div>
@@ -51,6 +51,7 @@
 </div>
 <br><br><br>
 <div class="container">
+<p class=" fw-italic text-danger">Dear customer, Once your orders are delivered this data will be auto deleted.</p>
 <table  class="table table-success">
 <tbody>
 		<tr>
