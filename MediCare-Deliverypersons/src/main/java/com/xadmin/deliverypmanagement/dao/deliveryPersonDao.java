@@ -53,8 +53,8 @@ public class deliveryPersonDao {
 		try (Connection connection = getConnection();
 				PreparedStatement preparedStatement = connection.prepareStatement(INSERT_dPerson_SQL)) {
 			preparedStatement.setString(1, dPerson.getNic());
-			preparedStatement.setString(3, dPerson.getName());
-			preparedStatement.setString(2, dPerson.getEmail());
+			preparedStatement.setString(2, dPerson.getName());
+			preparedStatement.setString(3, dPerson.getEmail());
 			preparedStatement.setString(4, dPerson.getAddress());
 			preparedStatement.setString(5, dPerson.getContact());
 			preparedStatement.setString(6, dPerson.getAvailability());
@@ -194,8 +194,8 @@ public class deliveryPersonDao {
 				PreparedStatement statement = connection.prepareStatement(UPDATE_dPerson_SQL);) {
 			System.out.println("updated Delivery Person:"+statement);
 			statement.setString(1, dPerson.getNic());
-			statement.setString(3, dPerson.getName());
-			statement.setString(2, dPerson.getEmail());
+			statement.setString(2, dPerson.getName());
+			statement.setString(3, dPerson.getEmail());
 			statement.setString(4, dPerson.getAddress());
 			statement.setString(5, dPerson.getContact());
 			statement.setString(6, dPerson.getAvailability());

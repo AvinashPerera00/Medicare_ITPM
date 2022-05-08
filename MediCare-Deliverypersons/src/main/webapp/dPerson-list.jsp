@@ -47,13 +47,14 @@
 				<a href="<%=request.getContextPath()%>/list" class="btn btn-success">All Delivery Persons</a>
 			<br>
 			<br>
+			
 			<table class="table table-bordered">
 				<thead>
 					<tr>
 						<th>ID</th>
 						<th>NIC</th>
-						<th>Email</th>
 						<th>Name</th>
+						<th>Email</th>
 						<th>Address</th>
 						<th>Contact No.</th>
 						<th>Availability</th>

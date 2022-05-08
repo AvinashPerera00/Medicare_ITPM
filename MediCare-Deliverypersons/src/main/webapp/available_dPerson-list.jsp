@@ -52,8 +52,8 @@
 				<thead>
 					<tr>
 						<th>ID</th>						
-						<th>Email</th>
 						<th>Name</th>
+						<th>Email</th>
 						<th>Contact No.</th>						
 						<th>Availability</th>
 						<th>Actions</th>

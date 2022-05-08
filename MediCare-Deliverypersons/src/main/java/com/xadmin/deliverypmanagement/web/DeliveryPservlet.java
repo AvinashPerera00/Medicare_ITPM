@@ -129,7 +129,6 @@ public class DeliveryPservlet extends HttpServlet {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("dPerson-form.jsp");
 		request.setAttribute("dPerson", existingdPerson);
 		dispatcher.forward(request, response);
-
 	}
 
 	private void insert_dPerson(HttpServletRequest request, HttpServletResponse response) 

@@ -136,8 +136,8 @@ public class deliveryDao {
 				PreparedStatement statement = connection.prepareStatement(UPDATE_delivery_SQL);) {
 			System.out.println("updated Delivery Person:"+statement);
 			statement.setInt(1, delivery.getOid());
-			statement.setString(3, delivery.getDlperson());
-			statement.setInt(2, delivery.getDlpersonid());
+			statement.setString(2, delivery.getDlperson());
+			statement.setInt(3, delivery.getDlpersonid());
 			statement.setString(4, delivery.getOdetails());
 			statement.setString(5, delivery.getDestination());
 			statement.setString(6, delivery.getDldate());

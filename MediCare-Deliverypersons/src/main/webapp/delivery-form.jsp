@@ -63,29 +63,29 @@
 
 				<fieldset class="form-group">
 					<label>Delivery person's name</label> <input type="text"
-						value="<c:out value='${dPerson.dlperson}' />" class="form-control"
+						value="<c:out value='${delivery.dlperson}' />" class="form-control"
 						name="dlperson" required="required">
 				</fieldset>
 
 				<fieldset class="form-group">
 					<label>Delivery person ID</label> <input type="text"
-						value="<c:out value='${dPerson.dlpersonid}' />" class="form-control"
+						value="<c:out value='${delivery.dlpersonid}' />" class="form-control"
 						name="dlpersonid" required="required">
 				</fieldset>
 
 				<fieldset class="form-group">
 					<label>Order Details</label> <input type="text"
-						value="<c:out value='${dPerson.odetails}' />" class="form-control"
+						value="<c:out value='${delivery.odetails}' />" class="form-control"
 						name="odetails" required="required">
 				</fieldset>
 				<fieldset class="form-group">
 					<label>Destination</label> <input type="text"
-						value="<c:out value='${dPerson.destination}' />" class="form-control"
+						value="<c:out value='${delivery.destination}' />" class="form-control"
 						name="destination" required="required">
 				</fieldset>
 				<fieldset class="form-group">
 					<label>Delivery Date</label> <input type="date"
-						value="<c:out value='${dPerson.dldate}' />" class="form-control"
+						value="<c:out value='${delivery.dldate}' />" class="form-control"
 						name="dldate" required="required">
 				</fieldset>
 
