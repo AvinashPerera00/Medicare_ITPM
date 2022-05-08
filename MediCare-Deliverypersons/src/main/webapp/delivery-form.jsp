@@ -58,30 +58,30 @@
 				<fieldset class="form-group">
 					<label>Order ID</label> <input type="text"
 						value="<c:out value='${delivery.oid}' />" class="form-control"
-						name="oid" required="required">
+						name="oid" required="required" placeholder="Ex :- 1" pattern="[0-9]+">
 				</fieldset>
 
 				<fieldset class="form-group">
 					<label>Delivery person's name</label> <input type="text"
 						value="<c:out value='${delivery.dlperson}' />" class="form-control"
-						name="dlperson" required="required">
+						name="dlperson" required="required" placeholder="Ex :- john" >
 				</fieldset>
 
 				<fieldset class="form-group">
 					<label>Delivery person ID</label> <input type="text"
 						value="<c:out value='${delivery.dlpersonid}' />" class="form-control"
-						name="dlpersonid" required="required">
+						name="dlpersonid" required="required" placeholder="Ex :- 1" pattern="[0-9]+">
 				</fieldset>
 
 				<fieldset class="form-group">
 					<label>Order Details</label> <input type="text"
 						value="<c:out value='${delivery.odetails}' />" class="form-control"
-						name="odetails" required="required">
+						name="odetails" required="required" placeholder="Ex :- 2 cards of penadol">
 				</fieldset>
 				<fieldset class="form-group">
 					<label>Destination</label> <input type="text"
 						value="<c:out value='${delivery.destination}' />" class="form-control"
-						name="destination" required="required">
+						name="destination" required="required" placeholder="Ex :- 23/3,Gampaha.">
 				</fieldset>
 				<fieldset class="form-group">
 					<label>Delivery Date</label> <input type="date"
