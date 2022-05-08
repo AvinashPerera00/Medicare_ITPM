@@ -42,7 +42,7 @@
 				<a href="<%=request.getContextPath()%>/dnew" class="btn btn-success">Add
 					New Delivery</a>
 				<a>   </a>
-				<a href="<%=request.getContextPath()%>/dlist" class="btn btn-success">All Deliveries</a>
+				<a href="<%=request.getContextPath()%>/dlist" class="btn btn-success">All Deliveries</a>				
 			<br>
 			<br>
 			<table class="table table-bordered">
