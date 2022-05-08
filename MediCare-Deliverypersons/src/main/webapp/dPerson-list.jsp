@@ -27,6 +27,7 @@
 				<li><a href="<%=request.getContextPath()%>/dlist"
 					class="nav-link">Deliveries</a></li>
 			</ul>
+			
 		</nav>
 	</header>
 	<br>
